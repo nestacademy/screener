@@ -1,0 +1,62 @@
+{
+   "name":"Nest Sharing",
+   "author":"Altantur Bayarsaikhan",
+   "version":"5.8",
+   "manifest_version":2,
+   "minimum_chrome_version":"34",
+   "description":"Present your screen",
+   "homepage_url":"https://github.com/altantur/Chrome-Extensions/tree/master/desktopCapture-p2p",
+   "background":{
+      "scripts":[
+         "background/helpers/socket.io.js",
+         "background/helpers/adapter.js",
+         "background/helpers/RTCMultiConnection.min.js",
+         "background/helpers/CodecsHandler.js",
+         "background/helpers/IceServersHandler.js",
+         "background/helpers/MultiStreamsMixer.js",
+         "background/helpers/AntMediaWrapper.js",
+         "background/globals.js",
+         "background/common.js",
+         "background/runtimePort.js",
+         "background/online-offline.js",
+         "background/gotTabCaptureStream.js",
+         "background/gotStream.js",
+         "background/onAccessApproved.js",
+         "background/setupWebRTCConnection.js",
+         "background/shareStreamUsingRTCMultiConnection.js",
+         "background/shareStreamUsingAntMediaServer.js",
+         "background/setDefaults.js",
+         "background/captureDesktop.js",
+         "background/captureCamera.js",
+         "background/captureTabUsingTabCapture.js"
+      ],
+      "persistent":false
+   },
+   "browser_action":{
+      "default_icon":"images/logo-symbol.png",
+      "default_title":"Present Your Screen",
+      "default_popup": "extension-pages/dropdown.html"
+   },
+   "icons":{
+      "16":"images/logo-symbol.png",
+      "22":"images/logo-symbol.png",
+      "32":"images/logo-symbol.png",
+      "48":"images/logo-symbol.png",
+      "128":"images/logo-symbol.png"
+   },
+   "permissions":[
+      "desktopCapture",
+      "storage",
+      "tabs",
+      "<all_urls>",
+      "activeTab",
+      "tabCapture"
+   ],
+   "web_accessible_resources":[
+      "images/logo-symbol.png"
+   ],
+   "options_ui":{
+      "page":"extension-pages/options.html",
+      "chrome_style":true
+   }
+}
